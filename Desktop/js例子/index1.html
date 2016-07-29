@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			text-align: center;
+			line-height: 100px;
+			font-size: 20px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input id="box1" type="button" value="方案1">
+		<input id="box2" type="button" value="方案2">
+		<input id="box3" type="button" value="方案3">
+		<input id="box4" type="button" value="方案4">
+	</form>
+	<div id="box">我是个DIV</div>
+</body> 
+<script>
+	var oBox1 = document.getElementById('box1');
+	var oBox2 = document.getElementById('box2');
+	var oBox3 = document.getElementById('box3');
+	var oBox4 = document.getElementById('box4');
+	var oBox = document.getElementById('box');
+	oBox1.onclick = function(){
+		oBox.style.width = '200px';
+		oBox.style.height = '200px';
+		oBox.style.color = '#000';
+		oBox.style.fontSize = '25px';
+		oBox.style.lineHeight = '200px';
+		oBox.style.background = '#ff0';
+		oBox.innerHTML = '我要变成黄色';
+	}
+	oBox2.onclick = function(){
+		oBox.style.width = '300px';
+		oBox.style.height = '300px';
+		oBox.style.color = '#f86';
+		oBox.style.fontSize = '25px';
+		oBox.style.lineHeight = '300px';
+		oBox.style.background = 'url("img/tg.png")';
+		oBox.style.backgroundSize = '100% 100%';
+		oBox.innerHTML = '我要变成紫色';
+	}
+	oBox3.onclick = function(){
+		oBox.style.width = '400px';
+		oBox.style.height = '400px';
+		oBox.style.color = '#926';
+		oBox.style.fontSize = '25px';
+		oBox.style.lineHeight = '400px';
+		oBox.style.background = '#0f0';
+		oBox.innerHTML = '我要变成绿色';
+	}
+	oBox4.onclick = function(){
+		oBox.style.width = '500px';
+		oBox.style.height = '500px';
+		oBox.style.color = '#876';
+		oBox.style.fontSize = '25px';
+		oBox.style.lineHeight = '500px';
+		oBox.style.background = '#00f';
+		oBox.innerHTML = '我要变成蓝色';
+	}
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		    *{margin: 0;padding: 0;} 
+			#div1{border-radius: 50%;width: 50px;height: 50px;position: absolute;top: 125px;left: 0;background: red;}
+			html,body{width: 100%;height: 100%;}
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="div1"></div>
+		
+		<!--<script type="text/javascript">
+		var speedx = 5;
+		var speedy = -13;
+		var ball = document.getElementById("box");
+		var timer = setInterval(function(){
+			ball.style.left = ball.offsetLeft + speedx + "px";
+			ball.style.top = ball.offsetTop + (speedy++) + "px";
+			if(ball.offsetTop >= (document.documentElement.offsetHeight-ball.offsetHeight)){
+				ball.style.top = document.documentElement.offsetHeight-ball.offsetHeight + "px";
+				speedy *= -0.6;
+				//console.log(speedy)
+				if(Math.abs(speedy)<=2){
+					//ball.style.top = document.documentElement.offsetHeight-ball.offsetHeight + "px";
+					clearInterval(timer);
+				}
+			}
+		},30);
+		var timer2 = setInterval(function(){
+			speedx>0 ? --speedx : clearInterval(timer2);
+		},2000);
+	</script>-->
+		
+		<script>
+			var speedx = 6;
+			var speedy = -13;
+			var ball = document.getElementById("div1");
+			var timer = setInterval(function(){
+				ball.style.left = ball.offsetLeft + speedx + "px";
+				ball.style.top = ball.offsetTop + (speedy++) +"px";
+				if(ball.offsetTop >= (document.documentElement.offsetHeight - ball.offsetHeight) )
+				{
+					ball.style.top = document.documentElement.offsetHeight - ball.offsetHeight +"px";
+					speedy *= -0.6;
+					if(Math.abs(speedy)<=2)
+					{
+						clearInterval(timer);
+					}
+				}								
+			},30);
+			var timer2 = setInterval(function(){
+			    speedx>0 ? --speedx : clearInterval(timer2);
+		    },2000);
+			
+		</script>
+	</body>
+</html>

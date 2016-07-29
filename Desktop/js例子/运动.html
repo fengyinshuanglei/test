@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		     *{margin: 0;padding: 0;}
+		     html,body{width: 100%;height: 100%;}
+		</style>
+		<script>
+	    window.onload = function()
+		  {
+		     	var ball = document.getElementById("div1");
+		     	var speedx = 20;
+		     	var speedy = 15;		     	
+		     	var timer = setInterval(function(){
+		     		ball.style.left = ball.offsetLeft + speedx + "px";
+		     		ball.style.top  = ball.offsetTop + speedy + "px";	
+		     		
+		     		if(ball.offsetLeft >= document.documentElement.offsetWidth - ball.offsetWidth)
+		     		{
+		     			speedx *= -1;
+		     		}
+		     		if(ball.offsetTop >= document.documentElement.offsetHeight - ball.offsetHeight)
+		     	     {
+		     	     	speedy *= -1;
+		     	     }
+		     	     if(ball.offsetTop <= 0)
+		     	     {
+		     	     	speedy *= -1;
+		     	     }
+		     	     if(ball.offsetLeft <= 0)
+		     	     {
+		     	     	speedx *= -1;
+		     	     }
+		     	},50)
+		     	
+		     }
+		
+		</script>
+	</head>
+	<body>
+		
+		<div id="div1" style="border-radius: 50%;width: 100px;height: 100px;background: red;position: absolute;top: 50px;left: 0;"></div>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: absolute;
+				left: -200px;
+			}
+			#div1 input{
+				width: 20px;
+				height: 50px;
+				line-height: 50px;
+				background: blue;
+				position: absolute;
+				right: -20px;
+				top: 80px;
+			}
+		</style>
+		
+		<script>
+			window.onload = function(){
+				var oDiv = document.getElementById("div1")
+				
+				oDiv.onmouseover = function(){
+					move(this,0);
+				}
+				oDiv.onmouseout = function(){
+					move(this,-200);
+				}				
+			}
+			
+						
+			function move(obj,target){
+				clearInterval(obj.timer);
+				obj.timer = setInterval(function(){
+					var speed = (target - obj.offsetLeft)/8;
+					speed = speed>0?Math.ceil(speed):Math.floor(speed);
+					if(target == obj.offsetLeft){
+						clearInterval(obj.timer);
+					}
+					else{
+						obj.style.left = obj.offsetLeft + speed + "px"
+					}
+				},30)
+			}									
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<input type="button" value="分享到" id="btn" />
+		</div>
+	</body>
+</html>

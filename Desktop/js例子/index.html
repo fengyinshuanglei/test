@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div{
+		float: left;
+	}
+		h3{
+			margin: 0;
+			width: 200px;
+			line-height: 30px;
+			text-align: center;
+			background: #f0f;
+		}
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			opacity: 0;
+		}
+		li{
+			width: 200px;
+			line-height: 20px;
+			text-indent: 2em;
+			background: #ff0;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="title">
+		<h3 >下拉菜单</h3>
+		<ul id="nav">
+			<li>吃饭</li>
+			<li>睡觉</li>
+			<li>打豆豆</li>
+		</ul>
+	</div>
+</body>
+</html>
+<script>
+		var oTitle = document.getElementById('title');
+		var oNav = document.getElementById('nav');
+		oTitle.onmouseover = function(){
+			oNav.style.opacity = 1;
+		}
+		oTitle.onmouseout = function(){
+			oNav.style.opacity = 0;
+		}
+</script>
